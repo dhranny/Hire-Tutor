@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:background="@color/back_color"
+                                                   android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/login_message"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/akaya_telivigala"
+            android:layout_marginHorizontal="50dp"
+            android:scrollHorizontally="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.1"
+            android:id="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:elevation="10dp"
+            android:background="@drawable/auth_back"
+            app:layout_constraintBottom_toBottomOf="parent">
+        <EditText
+                android:layout_width="300dp"
+                android:inputType="textEmailAddress"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="80dp"
+                android:padding="10dp"
+                android:id="@+id/username"
+                app:layout_constraintTop_toTopOf="parent"
+                android:hint="@string/username"
+                android:background="@drawable/backee"
+                android:drawableStart="@drawable/username" app:layout_constraintEnd_toEndOf="parent"
+        />
+        <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="20dp"
+                android:id="@+id/password"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/username"
+                android:background="@drawable/backee"
+                android:drawableStart="@drawable/lock"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:hint="Select Role"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:id="@+id/dropdown_menu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password">
+            <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/auto_complete"
+                    android:inputType="none"
+
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="50dp"
+                android:id="@+id/button"
+
+                android:text="Submit"
+                app:layout_constraintTop_toBottomOf="@+id/dropdown_menu"
+                android:background="@drawable/button_back"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="60dp"
+                android:id="@+id/regis"
+                android:text="@string/register"
+                app:layout_constraintTop_toBottomOf="@+id/button"
+                app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
